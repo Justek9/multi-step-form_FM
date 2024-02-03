@@ -1,0 +1,8 @@
+@import '../../../styles/settings.scss';
+
+.container {
+	height: 100%;
+	width: 20%;
+	background-image: url('./../../../../public/assets/images/bg-sidebar-desktop.svg');
+	border-radius: $radius;
+}
