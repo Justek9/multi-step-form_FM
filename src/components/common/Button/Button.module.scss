@@ -1,0 +1,14 @@
+@import '../../../styles/settings.scss';
+
+.btn {
+	width: 90px;
+	height: 40px;
+	color: $magnolia;
+	background-color: $marine;
+	font-family: $font-family;
+	border-radius: $radius;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
