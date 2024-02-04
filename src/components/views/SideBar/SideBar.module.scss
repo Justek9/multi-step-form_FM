@@ -5,4 +5,7 @@
 	width: 20%;
 	background-image: url('./../../../../public/assets/images/bg-sidebar-desktop.svg');
 	border-radius: $radius;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 1rem;
 }

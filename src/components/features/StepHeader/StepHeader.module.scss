@@ -1,0 +1,36 @@
+@import '../../../styles/settings.scss';
+
+.singleStep {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 1rem;
+	.number {
+		border: 1px solid $magnolia;
+		color: $magnolia;
+		border-radius: 50%;
+		height: 25px;
+		width: 25px;
+		text-align: center;
+		line-height: 25px;
+		margin-right: 0.7rem;
+		font-size: 0.7rem;
+		font-weight: $font-weight-medium;
+	}
+	.active {
+		background-color: $light-blue;
+		color: $black;
+	}
+	.stepNo {
+		color: $light-gray;
+		text-transform: uppercase;
+		font-size: 0.7rem;
+	}
+	.header {
+		color: $magnolia;
+		text-transform: uppercase;
+		margin-top: 0.2rem;
+		font-size: 0.8rem;
+		font-weight: $font-weight-bold;
+	}
+}
