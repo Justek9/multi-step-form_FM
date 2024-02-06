@@ -12,5 +12,24 @@
 body {
 	font-family: $font-family;
 	background-color: $magnolia;
-    
+}
+
+input {
+	height: 30px;
+	width: 100%;
+	border: 1px solid $gray;
+	outline: 1px solid $gray;
+	margin: 1rem 0;
+	border-radius: $radius;
+	padding: 0.5rem;
+}
+
+label {
+	display: block;
+	color: $marine;
+}
+
+input::placeholder {
+	color: $gray;
+	font-family: $font-family;
 }

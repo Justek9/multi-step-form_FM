@@ -1,9 +1,13 @@
 @import '../../../styles/settings.scss';
 
-.title {
-	color: $marine;
-}
-
-.subTitle {
-	color: $gray;
+.container {
+	.title {
+		color: $marine;
+		margin-bottom: 1rem;
+	}
+	
+	.subTitle {
+		color: $gray;
+		margin-bottom: 1rem;
+	}
 }
