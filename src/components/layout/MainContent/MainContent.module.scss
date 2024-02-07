@@ -2,7 +2,7 @@
 
 .container {
 	height: 70%;
-	width: 70%;
+	width: 40%;
 	background-color: $white;
 	border-radius: $radius;
 	margin: 0;
@@ -17,6 +17,8 @@
 
 	.mainContentContainer {
 		display: flex;
+		width: 70%;
+		height: 80%;
 		flex-direction: column;
 		border: 2px solid red;
 		margin-left: 3rem;
