@@ -8,6 +8,8 @@
 	font-family: $font-family;
 	border-radius: $radius;
 	outline: none;
+	border: none;
+	font-weight: $font-weight-bold;
 	&:hover {
 		cursor: pointer;
 	}

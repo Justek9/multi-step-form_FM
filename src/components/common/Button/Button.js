@@ -1,12 +1,13 @@
 import styles from './Button.module.scss'
 
-const Button = ({ text, color, onClick }) => {
+const Button = ({ text, color, bgColor, onClick }) => {
 	return (
 		<button
 			className={styles.btn}
 			onClick={onClick}
 			style={{
-				backgroundColor: color,
+				color: color,
+				backgroundColor: bgColor,
 			}}>
 			{text}
 		</button>
