@@ -2,7 +2,9 @@
 
 .container {
 	height: 70%;
-	width: 40%;
+	width: 50%;
+	max-width: 1000px;
+	max-height: 600px;
 	background-color: $white;
 	border-radius: $radius;
 	margin: 0;
@@ -13,7 +15,6 @@
 	flex-direction: row;
 	align-items: center;
 	padding: 1rem;
-	border: 2px solid orange;
 
 	.mainContentContainer {
 		display: flex;
