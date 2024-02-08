@@ -9,6 +9,7 @@ import styles from './MainContent.module.scss'
 import FinishUp from '../../steps/FinishUp/FinishUp'
 import FinalPage from '../../steps/FinalPage/FinalPage'
 import { useState } from 'react'
+import Slider from '../../common/Slider/Slider'
 
 const MainContent = () => {
 	const step = useSelector(getStep)
@@ -41,6 +42,7 @@ const MainContent = () => {
 						{step !== 1 && (
 							<Button text='Go back' bgColor='transparent' color='#02295a' onClick={() => previourStepHandler()} />
 						)}
+						<Slider />
 					</div>
 				</div>
 			)}
