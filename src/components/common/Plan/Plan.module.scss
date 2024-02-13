@@ -1,1 +1,29 @@
 @import '../../../styles/settings.scss';
+
+.container {
+	height: 90%;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+	border: 2px solid $gray;
+	border-radius: $radius;
+	cursor: pointer;
+	background-color: $white;
+	h3 {
+		text-align: left;
+	}
+	img {
+		height: 40px;
+		width: 40px;
+	}
+	.cost {
+		color: $gray;
+		margin: 0.5rem 0;
+		text-align: left;
+	}
+	.free {
+		font-size: 0.8rem;
+	}
+}

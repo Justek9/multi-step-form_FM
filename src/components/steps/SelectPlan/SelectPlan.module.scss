@@ -1,0 +1,10 @@
+@import '../../../styles/settings.scss';
+.container {
+	.plansContainer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 2rem 0;
+		height: 12rem;
+	}
+}

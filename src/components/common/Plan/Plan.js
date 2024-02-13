@@ -1,19 +1,25 @@
 import { getIsMonthlyPlan } from '../../../redux/formRedux'
-import Slider from '../Slider/Slider'
+import { useSelector } from 'react-redux'
 
-const Plan = ({ src, name, price }) => {
+import styles from './Plan.module.scss'
+
+const Plan = ({ plan }) => {
 	const isMonthly = useSelector(getIsMonthlyPlan)
 
+	const handleSelectPlan = () => {
+		console.log('plan selected')
+	}
 
 	return (
-		<div>
-			<img src={src}></img>
+		<button className={styles.container} onClick={handleSelectPlan}>
+			<img src={plan.src}></img>
 			<div>
-				<h3>{name}</h3>
-				<p>${price}/mo</p>
-				<Slider />
+				<h3>{plan.name}</h3>
+				{isMonthly && <p className={styles.cost}>${plan.monthlyCost}/mo</p>}
+				{!isMonthly && <p className={styles.cost}>${plan.yearlyCost}/yr</p>}
+				{!isMonthly && <p className={styles.free}>2 months free</p>}
 			</div>
-		</div>
+		</button>
 	)
 }
 export default Plan

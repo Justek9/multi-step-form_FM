@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getIsMonthlyPlan, isMonthlyPlan } from '../../../redux/formRedux'
 import styles from './Slider.module.scss'
@@ -6,6 +5,7 @@ import styles from './Slider.module.scss'
 const Slider = () => {
 	const isMonthly = useSelector(getIsMonthlyPlan)
 	const dispatch = useDispatch()
+	
 	const handleCheckBoxClick = () => {
 		dispatch(isMonthlyPlan(!isMonthly))
 	}
