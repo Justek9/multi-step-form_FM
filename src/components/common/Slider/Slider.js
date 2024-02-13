@@ -1,21 +1,23 @@
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getIsMonthlyPlan, isMonthlyPlan } from '../../../redux/formRedux'
 import styles from './Slider.module.scss'
 
 const Slider = () => {
-	const [monthlyPlan, setMonthlyPlan] = useState(true)
-	console.log(monthlyPlan)
+	const isMonthly = useSelector(getIsMonthlyPlan)
+	const dispatch = useDispatch()
 	const handleCheckBoxClick = () => {
-		setMonthlyPlan(!monthlyPlan)
+		dispatch(isMonthlyPlan(!isMonthly))
 	}
 
 	return (
 		<div className={styles.container}>
-			<p className={monthlyPlan ? styles.active : ''}>Monthly</p>
+			<p className={isMonthly ? styles.active : ''}>Monthly</p>
 			<label className={styles.switch}>
 				<input type='checkbox' onClick={handleCheckBoxClick}></input>
 				<span className={`${styles.slider} ${styles.round}`}></span>
 			</label>
-			<p className={!monthlyPlan ? styles.active : ''}>Yearly</p>
+			<p className={!isMonthly ? styles.active : ''}>Yearly</p>
 		</div>
 	)
 }

@@ -42,7 +42,6 @@ const MainContent = () => {
 						{step !== 1 && (
 							<Button text='Go back' bgColor='transparent' color='#02295a' onClick={() => previourStepHandler()} />
 						)}
-						<Slider />
 					</div>
 				</div>
 			)}
