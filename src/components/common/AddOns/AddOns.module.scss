@@ -1,0 +1,44 @@
+@import '../../../styles/settings.scss';
+
+.addOnContainer {
+	border: 1px solid $light-gray;
+	border-radius: $radius;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	p {
+		color: $purple;
+	}
+	.addOnsInput {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		h4 {
+			color: $marine;
+			margin-bottom: 0.2rem;
+		}
+		h5 {
+			color: $gray;
+		}
+		input {
+			display: block;
+			outline: none;
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-right: 0.5rem;
+			&:checked {
+				accent-color: $purple;
+			}
+		}
+		.addOnsHeader {
+			width: auto;
+		}
+	}
+}
+
+.active {
+	background-color: $alabaster;
+	border-color: $pastel;
+}

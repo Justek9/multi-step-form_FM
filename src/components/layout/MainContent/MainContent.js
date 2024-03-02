@@ -37,11 +37,11 @@ const MainContent = () => {
 					{step === 3 && <PickAddOns />}
 					{step === 4 && <FinishUp />}
 					<div className={styles.buttons}>
-						{step !== 4 && <Button text='Next Step' onClick={() => nextStepHandler()} />}
-						{step === 4 && <Button text='Confirm' bgColor='#473dff' onClick={() => confirmHandler()} />}
 						{step !== 1 && (
 							<Button text='Go back' bgColor='transparent' color='#02295a' onClick={() => previourStepHandler()} />
 						)}
+						{step !== 4 && <Button text='Next Step' onClick={() => nextStepHandler()} />}
+						{step === 4 && <Button text='Confirm' bgColor='#473dff' onClick={() => confirmHandler()} />}
 					</div>
 				</div>
 			)}

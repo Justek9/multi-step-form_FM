@@ -1,12 +1,10 @@
 const initialState = {
-	step: 1,
+	step: 3,
 	form: {
 		isMonthlyPlan: true,
 		plan: null,
 		personalData: { emailAddress: '', phone: '', name: '' },
-		onlineService: false,
-		largerStorage: false,
-		customizableProfile: false,
+		addOns: { onlineService: false, largerStorage: false, customizableProfile: false },
 	},
 }
 
