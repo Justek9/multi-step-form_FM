@@ -3,9 +3,7 @@ const initialState = {
 	form: {
 		isMonthlyPlan: true,
 		plan: null,
-		name: null,
-		emailAddress: null,
-		phone: null,
+		personalData: { emailAddress: '', phone: '', name: '' },
 		onlineService: false,
 		largerStorage: false,
 		customizableProfile: false,
