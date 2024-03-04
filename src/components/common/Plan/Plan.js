@@ -15,7 +15,7 @@ const Plan = ({ plan }) => {
 
 	return (
 		<button
-			className={`${selectedPlan.name === plan.name ? styles.active : ''} ${styles.container}`}
+			className={`${selectedPlan?.name === plan.name ? styles.active : ''} ${styles.container}`}
 			onClick={e => handleSelectPlan(e)}>
 			<img src={plan.src}></img>
 			<div>
