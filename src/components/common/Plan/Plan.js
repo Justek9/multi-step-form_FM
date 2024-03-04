@@ -7,16 +7,15 @@ import { useEffect, useState } from 'react'
 const Plan = ({ plan }) => {
 	const isMonthly = useSelector(state => getIsMonthlyPlan(state))
 	const selectedPlan = useSelector(state => getSelectedPlan(state))
-	console.log(selectedPlan)
 	const dispatch = useDispatch()
 	const handleSelectPlan = e => {
 		e.preventDefault()
-		dispatch(selectPlan(plan.name))
+		dispatch(selectPlan(plan))
 	}
 
 	return (
 		<button
-			className={`${selectedPlan === plan.name ? styles.active : ''} ${styles.container}`}
+			className={`${selectedPlan.name === plan.name ? styles.active : ''} ${styles.container}`}
 			onClick={e => handleSelectPlan(e)}>
 			<img src={plan.src}></img>
 			<div>

@@ -1,0 +1,28 @@
+@import '../../../styles/settings.scss';
+.container {
+	.content {
+		padding: 1rem;
+		border-radius: $radius;
+		background-color: $alabaster;
+		.planSummary {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+			border-bottom: 1px solid $light-gray;
+			.btnChange {
+				background-color: transparent;
+				border: none;
+				text-decoration: underline;
+				color: $marine;
+				font-family: inherit;
+				display: block;
+				margin-top: 0.5rem;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

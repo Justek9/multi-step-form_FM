@@ -1,5 +1,5 @@
 const initialState = {
-	step: 3,
+	step: 1,
 	form: {
 		isMonthlyPlan: true,
 		plan: null,

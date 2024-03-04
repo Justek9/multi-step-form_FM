@@ -4,7 +4,7 @@ const MainContentHeader = ({ title, subtitle }) => {
 	return (
 		<div className={styles.container}>
 			<h1 className={styles.title}>{title}</h1>
-			<h3 className={styles.subTitle}>{subtitle}</h3>
+			<h4 className={styles.subTitle}>{subtitle}</h4>
 		</div>
 	)
 }
