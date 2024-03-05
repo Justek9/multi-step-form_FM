@@ -10,9 +10,12 @@ import FinishUp from '../../steps/FinishUp/FinishUp'
 import FinalPage from '../../steps/FinalPage/FinalPage'
 import { useState } from 'react'
 import Slider from '../../common/Slider/Slider'
+import { getAddOns, getPersonalData, getSelectedPlan } from '../../../redux/formRedux'
 
 const MainContent = () => {
 	const step = useSelector(getStep)
+	const personalInfo = useSelector(getPersonalData)
+	const plan = useSelector(getSelectedPlan)
 	const [isFormConfirmed, setIsFormConfirmed] = useState(false)
 	const dispatch = useDispatch()
 
@@ -27,6 +30,13 @@ const MainContent = () => {
 		setIsFormConfirmed(true)
 	}
 
+	function isNextStepButtonDisabled() {
+		if (step === 1 && personalInfo.name && personalInfo.emailAddress && personalInfo.phone) return false
+		if (step === 2 && plan) return false
+		if (step === 3) return false
+
+		return true
+	}
 	return (
 		<div className={styles.container}>
 			<SideBar />
@@ -40,7 +50,9 @@ const MainContent = () => {
 						{step !== 1 && (
 							<Button text='Go back' bgColor='transparent' color='#02295a' onClick={() => previourStepHandler()} />
 						)}
-						{step !== 4 && <Button text='Next Step' onClick={() => nextStepHandler()} />}
+						{step !== 4 && (
+							<Button text='Next Step' onClick={() => nextStepHandler()} disabled={isNextStepButtonDisabled()} />
+						)}
 						{step === 4 && <Button text='Confirm' bgColor='#473dff' onClick={() => confirmHandler()} />}
 					</div>
 				</div>

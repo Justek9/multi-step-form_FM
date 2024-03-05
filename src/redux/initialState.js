@@ -3,7 +3,7 @@ const initialState = {
 	form: {
 		isMonthlyPlan: true,
 		plan: null,
-		personalData: { emailAddress: '', phone: '', name: '' },
+		personalData: { emailAddress: undefined, phone: undefined, name: undefined },
 		addOns: { onlineService: false, largerStorage: false, customizableProfile: false },
 	},
 }

@@ -13,4 +13,9 @@
 	&:hover {
 		cursor: pointer;
 	}
+	&:disabled {
+		background-color: $pastel;
+		cursor: not-allowed;
+	}
 }
+
