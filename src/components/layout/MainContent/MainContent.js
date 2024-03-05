@@ -9,8 +9,7 @@ import styles from './MainContent.module.scss'
 import FinishUp from '../../steps/FinishUp/FinishUp'
 import FinalPage from '../../steps/FinalPage/FinalPage'
 import { useState } from 'react'
-import Slider from '../../common/Slider/Slider'
-import { getAddOns, getPersonalData, getSelectedPlan } from '../../../redux/formRedux'
+import { getPersonalData, getSelectedPlan } from '../../../redux/formRedux'
 
 const MainContent = () => {
 	const step = useSelector(getStep)
@@ -31,7 +30,8 @@ const MainContent = () => {
 	}
 
 	function isNextStepButtonDisabled() {
-		if (step === 1 && personalInfo.name && personalInfo.emailAddress && personalInfo.phone) return false
+		if (step === 1 && personalInfo.name !== '' && personalInfo.emailAddress !== '' && personalInfo.phone !== '')
+			return false
 		if (step === 2 && plan) return false
 		if (step === 3) return false
 
