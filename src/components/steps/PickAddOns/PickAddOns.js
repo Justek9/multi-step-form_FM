@@ -1,25 +1,18 @@
+import { useSelector } from 'react-redux'
+import { getAddOns } from '../../../redux/formRedux'
 import AddOns from '../../common/AddOns/AddOns'
 import MainContentHeader from '../../common/MainContentHeader/MainContentHeader'
 import styles from './PickAddOns.module.scss'
 
 const PickAddOns = () => {
-	const addOns = [
-		{ id: 1, title: 'Online services', subtitle: 'Access to multiplayer game', price: 1 },
-		{ id: 2, title: 'Larger storage', subtitle: 'Extra 1TB of cloud services', price: 2 },
-		{
-			id: 3,
-			title: 'Customizable profile',
-			subtitle: 'Custom theme on your profile',
-			price: 2,
-		},
-	]
+	const addOns = useSelector(state => getAddOns(state))
 
 	return (
 		<div className={styles.container}>
 			<MainContentHeader title='Pick add-ons' subtitle='Add-ons help enhance your gaming experience' />
-			{addOns.map(addOn => (
-				<AddOns addOn={addOn} key={addOn.id} />
-			))}
+			{addOns.map(addOn => {
+				return <AddOns addOn={addOn} key={addOn.id} />
+			})}
 		</div>
 	)
 }

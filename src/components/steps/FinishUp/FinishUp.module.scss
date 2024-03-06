@@ -11,6 +11,9 @@
 			align-items: center;
 			padding: 1rem;
 			border-bottom: 1px solid $light-gray;
+			.planName {
+				color: $marine;
+			}
 			.btnChange {
 				background-color: transparent;
 				border: none;
@@ -21,6 +24,7 @@
 				margin-top: 0.5rem;
 				&:hover {
 					cursor: pointer;
+					color: $purple;
 				}
 			}
 		}
@@ -30,6 +34,24 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: 1rem;
+			color: $gray;
+			.addOnPrice {
+				color: $marine;
+			}
+		}
+	}
+	.total {
+		padding: 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.totalCaption {
+			color: $gray;
+		}
+		.totalAmount {
+			color: $purple;
+			font-weight: 700;
+			font-size: 1.2rem;
 		}
 	}
 }
