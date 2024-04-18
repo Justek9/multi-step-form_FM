@@ -34,3 +34,10 @@
 		font-weight: $font-weight-bold;
 	}
 }
+
+@media (max-width: 576px) {
+	.singleStep {
+		margin: 1rem 0;
+		align-items: flex-start;
+	}
+}
