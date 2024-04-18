@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import {setAddOns } from '../../../redux/formRedux'
+import { setAddOns } from '../../../redux/formRedux'
 import styles from './AddOns.module.scss'
 
 const AddOns = ({ addOn }) => {
@@ -15,7 +15,8 @@ const AddOns = ({ addOn }) => {
 				<input
 					type='checkbox'
 					checked={addOn.isChecked}
-					onChange={() => {
+					onClick={event => {
+						event.stopPropagation()
 						dispatch(setAddOns({ name: addOn.title }))
 					}}></input>
 				<div className={styles.addOnsHeader}>
