@@ -1,7 +1,6 @@
 @import '../../../styles/settings.scss';
 
 .container {
-	border: 2px solid red;
 	height: 80%;
 	width: 50%;
 	max-width: 1000px;
@@ -26,6 +25,7 @@
 		position: relative;
 
 		.buttons {
+			border: 2px solid green;
 			position: absolute;
 			bottom: 0;
 			width: 100%;
@@ -35,9 +35,11 @@
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 776px) {
 	.container {
 		width: 100vw;
+		height: auto;
+		min-height: 100vh;
 		flex-direction: column;
 		padding: 0;
 		top: 0%;
@@ -47,9 +49,14 @@
 			height: auto;
 			width: 90%;
 			margin-left: 0rem;
-			border-radius: 10px;
+			border-radius: $radius;
 			margin-top: -70px;
+			margin-bottom: 0.5rem;
 			padding: 2rem;
+			.buttons {
+				position: relative;
+				margin-top: 1rem;
+			}
 		}
 	}
 }

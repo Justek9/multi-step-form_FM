@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import styles from './StepHeader.module.scss'
 
 const StepHeader = ({ step, active }) => {
-	const isMobile = useMediaQuery({ query: `(max-width: 576px)` })
+	const isMobile = useMediaQuery({ query: `(max-width: 776px)` })
 
 	return (
 		<div className={styles.singleStep}>

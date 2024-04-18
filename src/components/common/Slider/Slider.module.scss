@@ -62,3 +62,16 @@
 		transform: translateX(26px);
 	}
 }
+
+@media (max-width: 776px) {
+	.container {
+		position: relative;
+		margin-top: 2rem;
+		height: auto;
+		width: 100%;
+		align-items: flex-end;
+		background-color: $magnolia;
+padding: 1rem;
+	
+	}
+}

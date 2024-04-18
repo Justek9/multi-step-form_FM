@@ -31,3 +31,19 @@
 	background-color: $alabaster;
 	border-color: $pastel;
 }
+
+@media (max-width: 776px) {
+	.container {
+		width: 100%;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-bottom: 0.5rem;
+	}
+
+	.active {
+		border-color: $marine;
+	}
+	img {
+		margin-right: 0.5rem;
+	}
+}
