@@ -57,7 +57,11 @@ const MainContent = () => {
 					</div>
 				</div>
 			)}
-			{isFormConfirmed && <FinalPage />}
+			{isFormConfirmed && (
+				<div className={styles.mainContentContainer}>
+					<FinalPage />
+				</div>
+			)}
 		</div>
 	)
 }

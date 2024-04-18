@@ -17,3 +17,18 @@
 		line-height: 1.5rem;
 	}
 }
+
+@media (max-width: 776px) {
+	.container {
+		padding: 0;
+		width: 100%;
+
+		img {
+			height: 50px;
+			width: 50px;
+		}
+		.header {
+			font-size: 1.5rem;
+		}
+	}
+}
