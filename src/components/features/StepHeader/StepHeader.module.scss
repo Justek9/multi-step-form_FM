@@ -4,7 +4,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 1rem;
+	margin: 0.7rem;
 	.number {
 		border: 1px solid $magnolia;
 		color: $magnolia;
@@ -13,7 +13,7 @@
 		width: 25px;
 		text-align: center;
 		line-height: 25px;
-		margin-right: 0.7rem;
+		margin-right: 0.4rem;
 		font-size: 0.7rem;
 		font-weight: $font-weight-medium;
 	}
@@ -24,13 +24,13 @@
 	.stepNo {
 		color: $light-gray;
 		text-transform: uppercase;
-		font-size: 0.7rem;
+		font-size: 0.6rem;
 	}
 	.header {
 		color: $magnolia;
 		text-transform: uppercase;
 		margin-top: 0.2rem;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		font-weight: $font-weight-bold;
 	}
 }

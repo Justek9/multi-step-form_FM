@@ -29,14 +29,6 @@ const MainContent = () => {
 		setIsFormConfirmed(true)
 	}
 
-	function isNextStepButtonDisabled() {
-		if (step === 1 && personalInfo.name !== '' && personalInfo.emailAddress !== '' && personalInfo.phone !== '')
-			return false
-		if (step === 2 && plan) return false
-		if (step === 3) return false
-
-		return true
-	}
 	return (
 		<div className={styles.container}>
 			<SideBar />
@@ -50,9 +42,7 @@ const MainContent = () => {
 						{step !== 1 && (
 							<Button text='Go back' bgColor='transparent' color='#02295a' onClick={() => previourStepHandler()} />
 						)}
-						{step !== 4 && (
-							<Button text='Next Step' onClick={() => nextStepHandler()} disabled={isNextStepButtonDisabled()} />
-						)}
+						{/* {step !== 4 && <Button text='Next Step' onClick={() => nextStepHandler()} />} */}
 						{step === 4 && <Button text='Confirm' bgColor='#473dff' onClick={() => confirmHandler()} />}
 					</div>
 				</div>

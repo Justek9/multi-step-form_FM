@@ -1,4 +1,15 @@
-.container{
-    display: flex;
-    flex-direction: column;
+@import '../../../styles/settings.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.labelContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	.errorMessage {
+		color: $strawberry;
+	}
 }
