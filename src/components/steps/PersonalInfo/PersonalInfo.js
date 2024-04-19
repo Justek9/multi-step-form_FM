@@ -37,11 +37,17 @@ const PersonalInfo = () => {
 					onChange={e => dispatch(setPersonalData({ ...personalInfo, name: e.target.value }))}></input>
 				<div className={styles.labelContainer}>
 					<label>Email Address</label>
-					{errors.email && <small className={styles.errorMessage}>This field is required</small>}
+					{errors.email && <small className={styles.errorMessage}>{errors.email.message}</small>}
 				</div>
 				<input
 					type='email'
-					{...register('email', { required: true })}
+					{...register('email', {
+						required: 'required',
+						pattern: {
+							value: /\S+@\S+\.\S+/,
+							message: 'Entered value does not match email format',
+						},
+					})}
 					placeholder='e.g. stephenking@lorem.com'
 					value={personalInfo.emailAddress}
 					onChange={e => dispatch(setPersonalData({ ...personalInfo, emailAddress: e.target.value }))}></input>
