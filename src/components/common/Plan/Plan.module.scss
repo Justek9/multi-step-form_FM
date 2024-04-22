@@ -26,6 +26,10 @@
 	.free {
 		font-size: 0.8rem;
 	}
+	&:hover {
+		background-color: $alabaster;
+		border-color: $pastel;
+	}
 }
 .active {
 	background-color: $alabaster;

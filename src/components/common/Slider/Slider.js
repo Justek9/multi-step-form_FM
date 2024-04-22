@@ -14,7 +14,7 @@ const Slider = () => {
 		<div className={styles.container}>
 			<p className={isMonthly ? styles.active : ''}>Monthly</p>
 			<label className={styles.switch}>
-				<input type='checkbox' onClick={handleCheckBoxClick}></input>
+				<input type='checkbox' onClick={handleCheckBoxClick} checked={!isMonthly} onChange={() => {}}></input>
 				<span className={`${styles.slider} ${styles.round}`}></span>
 			</label>
 			<p className={!isMonthly ? styles.active : ''}>Yearly</p>

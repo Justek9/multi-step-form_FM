@@ -37,6 +37,10 @@
 			width: auto;
 		}
 	}
+	&:hover {
+		background-color: $alabaster;
+		border-color: $pastel;
+	}
 }
 
 .active {
