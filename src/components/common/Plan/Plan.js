@@ -2,7 +2,6 @@ import { getIsMonthlyPlan, getSelectedPlan, selectedPlan, selectPlan } from '../
 import { useDispatch, useSelector } from 'react-redux'
 
 import styles from './Plan.module.scss'
-import { useEffect, useState } from 'react'
 
 const Plan = ({ plan }) => {
 	const isMonthly = useSelector(state => getIsMonthlyPlan(state))
@@ -17,7 +16,7 @@ const Plan = ({ plan }) => {
 		<button
 			className={`${selectedPlan?.name === plan.name ? styles.active : ''} ${styles.container}`}
 			onClick={e => handleSelectPlan(e)}>
-			<img src={plan.src}></img>
+			<img src={plan.src} alt='plan thumbnail'></img>
 			<div>
 				<h3>{plan.name}</h3>
 				{isMonthly && <p className={styles.cost}>${plan.monthlyCost}/mo</p>}

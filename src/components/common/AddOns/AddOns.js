@@ -15,6 +15,7 @@ const AddOns = ({ addOn }) => {
 				<input
 					type='checkbox'
 					checked={addOn.isChecked}
+					onChange={e => {}}
 					onClick={event => {
 						event.stopPropagation()
 						dispatch(setAddOns({ name: addOn.title }))

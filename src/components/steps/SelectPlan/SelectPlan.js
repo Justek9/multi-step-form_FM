@@ -11,7 +11,6 @@ const SelectPlan = () => {
 		{ id: 3, name: 'Pro', yearlyCost: 150, monthlyCost: 15, src: '../../assets/images/icon-pro.svg' },
 	]
 
-	
 	return (
 		<div className={styles.container}>
 			<MainContentHeader title='Select your plan' subtitle='You have option of monthly or yearly billing.' />

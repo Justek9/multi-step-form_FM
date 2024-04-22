@@ -42,7 +42,7 @@ const PersonalInfo = () => {
 				<input
 					type='email'
 					{...register('email', {
-						required: 'required',
+						required: 'This field is required',
 						pattern: {
 							value: /\S+@\S+\.\S+/,
 							message: 'Entered value does not match email format',

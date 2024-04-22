@@ -9,17 +9,19 @@ import styles from './MainContent.module.scss'
 import FinishUp from '../../steps/FinishUp/FinishUp'
 import FinalPage from '../../steps/FinalPage/FinalPage'
 import { useState } from 'react'
-import { getPersonalData, getSelectedPlan } from '../../../redux/formRedux'
+import { getSelectedPlan } from '../../../redux/formRedux'
 
 const MainContent = () => {
 	const step = useSelector(getStep)
-	const personalInfo = useSelector(getPersonalData)
 	const plan = useSelector(getSelectedPlan)
 	const [isFormConfirmed, setIsFormConfirmed] = useState(false)
 	const dispatch = useDispatch()
 
 	const nextStepHandler = () => {
-		dispatch(incrementStep())
+			if (step === 2 && !plan) {
+			alert('Please select a plan')
+		}
+		if (plan) dispatch(incrementStep())
 	}
 
 	const previourStepHandler = () => {
@@ -42,7 +44,7 @@ const MainContent = () => {
 						{step !== 1 && (
 							<Button text='Go back' bgColor='transparent' color='#02295a' onClick={() => previourStepHandler()} />
 						)}
-						{/* {step !== 4 && <Button text='Next Step' onClick={() => nextStepHandler()} />} */}
+						{step !== 4 && step !== 1 && <Button text='Next Step' onClick={() => nextStepHandler()} />}
 						{step === 4 && <Button text='Confirm' bgColor='#473dff' onClick={() => confirmHandler()} />}
 					</div>
 				</div>
